@@ -1,0 +1,18 @@
+<h1>New Post</h1>
+<%= form_for @post do |f| %>
+  <div class="field">
+    <h4><%= f.label "Post Title" %><br>
+    <%= f.text_field :title %></h4>
+  </div>
+  <div class="field">
+    <h4><%= f.label "Post" %><br>
+    <%= f.text_field :comment %></h4>
+  </div>
+  <div class="field">
+    <h4><%= f.label "Link" %><br>
+    <%= f.text_field :link %></h4>
+  </div>
+  <div class="actions">
+    <%= f.submit 'Add', :class => 'btn btn-success', :id => "post-button" %>
+  </div>
+<% end %>

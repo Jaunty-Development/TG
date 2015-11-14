@@ -5,11 +5,16 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'landing#index'
 
+
   resources :sessions
 
+  # TODO remove resources :users and replace get 'users' => 'users#show'
   resources :users
+  # TODO remove resources :posts and replace get 'new/post' => 'posts#new'
+  resources :posts
 
   get 'login' => 'sessions#new'
+  get 'announcements' => 'landing#announcements'
   delete 'logout' => 'sessions#destroy'
 
   # Example of regular route:

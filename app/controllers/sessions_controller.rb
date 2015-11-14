@@ -7,6 +7,8 @@ class SessionsController < ApplicationController
     if @user
       session[:user_id] = @user.id
       redirect_to @user
+    else
+      redirect_to login_path
     end
   end
 
@@ -14,5 +16,5 @@ class SessionsController < ApplicationController
     session[:user_id] = nil
     redirect_to '/'
   end
-  
+
 end
