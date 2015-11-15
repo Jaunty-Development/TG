@@ -11,15 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151114225205) do
+ActiveRecord::Schema.define(version: 20151115032609) do
 
   create_table "posts", force: :cascade do |t|
     t.string   "title"
     t.text     "comment"
     t.string   "link"
     t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
+    t.string   "document_file_name"
+    t.string   "document_content_type"
+    t.integer  "document_file_size"
+    t.datetime "document_updated_at"
   end
 
   add_index "posts", ["user_id"], name: "index_posts_on_user_id"
