@@ -1,7 +1,7 @@
 <% @posts.each do |post| %>
-<%= post.title %>
-<%= post.comment %>
-<%= post.link %>
-<%= link_to "View", post.document.url %>
-<br>
+  <%= post.title %>
+  <%= post.comment %>
+  <%= post.link %>
+  <%= link_to "View", post.document.url, :target => '_blank'%>
+  <br>
 <% end %>
