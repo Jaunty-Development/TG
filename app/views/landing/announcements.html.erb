@@ -5,3 +5,7 @@
   <%= link_to "View", post.document.url, :target => '_blank'%>
   <br>
 <% end %>
+
+<% @instagram.each do |instagram| %>
+    <%= image_tag instagram.images.standard_resolution.url %>
+<% end %>
