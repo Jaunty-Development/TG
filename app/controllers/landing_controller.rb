@@ -11,6 +11,6 @@ class LandingController < ApplicationController
   private
 
   def set_instagram
-    @instagram = Instagram.user_recent_media(ENV['INSTAGRAM_USER_ID'], {:count => 5}
+    @instagram = Instagram.user_recent_media(ENV['INSTAGRAM_USER_ID'], {:count => 5})
   end
 end
