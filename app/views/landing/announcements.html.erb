@@ -5,12 +5,3 @@
   <%= link_to "View", post.document.url, :target => '_blank'%>
   <br>
 <% end %>
-
-<% @instagram.each do |instagram| %>
-    <%= image_tag instagram.images.thumbnail.url %>
-    <br>
-    <% if instagram.caption %>
-      <%= instagram.caption.text %>
-    <%end%>
-    <br>
-<% end %>
