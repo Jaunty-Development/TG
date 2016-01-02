@@ -15,6 +15,13 @@ Rails.application.routes.draw do
 
   get 'login' => 'sessions#new'
   get 'announcements' => 'landing#announcements'
+  get 'cheer' => 'landing#cheer'
+  get 'dance' => 'landing#dance'
+  get 'classes' => 'landing#classes'
+  get 'camps' => 'landing#camps'
+  get 'month' => 'landing#month'
+  get 'alumni' => 'landing#alumni'
+
   delete 'logout' => 'sessions#destroy'
 
   # Example of regular route:
